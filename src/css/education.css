@@ -1,0 +1,76 @@
+.education {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    background-color: #97b5bd;
+}
+
+
+.container {
+    width: 100%;
+
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.container>* {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1% 0;
+}
+
+.btnShowContent1, .btnShowContent2, .btnShowContent3, .btnShowContent4 {
+    border: 1px solid white;
+
+    width: 60%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btnShowContent1>div, .btnShowContent2>div, .btnShowContent3>div, .btnShowContent4>div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.btnShowContent1>div:nth-child(1), .btnShowContent2>div:nth-child(1), .btnShowContent3>div:nth-child(1), .btnShowContent4>div:nth-child(1) {
+    width: 90%;
+    margin-left: 1%;
+}
+
+.btnShowContent1>div:nth-child(2), .btnShowContent2>div:nth-child(2), .btnShowContent3>div:nth-child(2), .btnShowContent4>div:nth-child(2) {
+    width: 5%;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hideContent1, .hideContent2, .hideContent3, .hideContent4 {
+    border: 1px solid white;
+    margin: 0.5% 0;
+
+    width: 60%;
+    height: 150px;
+
+    padding: 2%;
+}
+
+.toggle {
+    display: none;
+}
+
+.bg {
+    background-color: #333;
+    border: none;
+    transition: all .4s ease-in-out;
+}

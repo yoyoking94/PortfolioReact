@@ -1,0 +1,66 @@
+.experience {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    background-color: #7A90A4;
+}
+
+.experience > div{
+    width: 100%;
+}
+
+.exp {
+    width: 100%;
+    height: auto;
+    margin: 1% 0;
+    
+    
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: #fff;
+}
+
+.cardExp {
+    border: 1px solid white;
+    width: 400px;
+    height: auto;
+    padding: 2%;
+    margin: 1%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardExp h1{
+    color: rgb(155, 49, 49);
+}
+
+.cardExp b{
+    color: rgb(156, 94, 156)
+}
+
+@media screen and (max-width: 500px) {
+    .experience {
+        height: auto !important;
+        padding: 10% 0;
+    }
+
+    .expR1,
+    .expR2 {
+        display: block;
+    }
+}

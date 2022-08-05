@@ -1,0 +1,220 @@
+input[type=radio] {
+    display: none;
+}
+
+.skills {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    background-color: #344D59;
+}
+
+.slider {
+
+    transform-style: preserve-3d;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.cardSlider {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+#item-1:checked~.cards #card-5,
+#item-2:checked~.cards #card-1,
+#item-3:checked~.cards #card-2,
+#item-4:checked~.cards #card-3,
+#item-5:checked~.cards #card-4 {
+    transform: translatex(-70%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #card-2,
+#item-2:checked~.cards #card-3,
+#item-3:checked~.cards #card-4,
+#item-4:checked~.cards #card-5,
+#item-5:checked~.cards #card-1 {
+    transform: translatex(70%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #card-3,
+#item-2:checked~.cards #card-4,
+#item-3:checked~.cards #card-5,
+#item-4:checked~.cards #card-1,
+#item-5:checked~.cards #card-2 {
+    transform: translatey(-50%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #card-4,
+#item-2:checked~.cards #card-5,
+#item-3:checked~.cards #card-1,
+#item-4:checked~.cards #card-2,
+#item-5:checked~.cards #card-3 {
+    transform: translatey(50%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #card-1,
+#item-2:checked~.cards #card-2,
+#item-3:checked~.cards #card-3,
+#item-4:checked~.cards #card-4,
+#item-5:checked~.cards #card-5 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* Card */
+.card {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    background: #333;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.card .face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .face.face1 {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.card .face.face1 h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.card .face.face1 .language, .logiciels, .bureautique, .lpo, .langues {
+    background-color: white;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card .face.face2 {
+    transition: 0.5s;
+}
+
+.card .face.face2 h2 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.card:hover .face.face2 {
+    height: 60px;
+}
+
+.card:hover .face.face2 h2 {
+    font-size: 1em;
+}
+
+.card:nth-child(1) .face.face2, .card:nth-child(2) .face.face2, .card:nth-child(3) .face.face2, .card:nth-child(4) .face.face2, .card:nth-child(5) .face.face2 {
+    background-color: #b098c1;
+}
+
+.lText {
+    margin: 5% 0;
+}
+
+/* responsive */
+@media screen and (max-width: 3000px) {
+    .slider {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .slider {
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .slider {
+        transform: scale(0.5);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .slider {
+        transform: scale(0.4);
+        margin-left: -20%;
+    }
+
+    #item-1:checked~.cards #card-5,
+    #item-2:checked~.cards #card-1,
+    #item-3:checked~.cards #card-2,
+    #item-4:checked~.cards #card-3,
+    #item-5:checked~.cards #card-4 {
+        transform: translatex(-80%)
+    }
+
+    #item-1:checked~.cards #card-2,
+    #item-2:checked~.cards #card-3,
+    #item-3:checked~.cards #card-4,
+    #item-4:checked~.cards #card-5,
+    #item-5:checked~.cards #card-1 {
+        transform: translatex(80%);
+        opacity: 0.4;
+        z-index: 0;
+    }
+
+    #item-1:checked~.cards #card-3,
+    #item-2:checked~.cards #card-4,
+    #item-3:checked~.cards #card-5,
+    #item-4:checked~.cards #card-1,
+    #item-5:checked~.cards #card-2 {
+        transform: translatey(-40%)
+    }
+
+    #item-1:checked~.cards #card-4,
+    #item-2:checked~.cards #card-5,
+    #item-3:checked~.cards #card-1,
+    #item-4:checked~.cards #card-2,
+    #item-5:checked~.cards #card-3 {
+        transform: translatey(40%)
+    }
+
+    #item-1:checked~.cards #card-1,
+    #item-2:checked~.cards #card-2,
+    #item-3:checked~.cards #card-3,
+    #item-4:checked~.cards #card-4,
+    #item-5:checked~.cards #card-5 {
+        transform: translatex(0)
+    }
+
+}

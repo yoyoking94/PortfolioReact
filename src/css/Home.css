@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+}
+
+.home-logo {
+    position: absolute;
+    display: inline-block;
+    left: -300px;
+    top: -300px;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .home-logo {
+        animation: App-logo-spin infinite 50s linear;
+    }
+}
+
+.home-header {
+    background: url('../mars.jpg');
+    width: 100vw;
+    height: 100vh;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(1808deg);
+        left: calc(100% - 10px);
+        top: calc(100% - 10px);
+    }
+}
+
+.about {
+    flex-direction: column;
+}
+
+.about>* {
+    margin: 2% 0;
+}
+
+.aButton {
+    display: flex;
+    justify-content: center;
+}
+
+.aButton li {
+    list-style: none;
+    margin: 1%;
+    font-size: 100px;
+}
+
+.buttonLinks {
+    text-decoration: none;
+    color: #fff;
+}
+
+hr {
+    width: 50%;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.center>* {
+    margin: 1% 0;
+}
